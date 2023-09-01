@@ -26,6 +26,6 @@ jobs:
           action: "upload"
           app_location: "/"
           api_location: ""
-          output_location: "public"
+          output_location: "out"
         env:
           IS_STATIC_EXPORT: true
