@@ -9,9 +9,6 @@ defaults:
   run:
     working-directory: front-end
 
-env:
-  WORKING_DIRECTORY: front-end
-
 jobs:
   test-project:
     name: Test project
@@ -22,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: $WORKING_DIRECTORY/.node-version
+          node-version-file: ./front-end/.node-version
       - name: Install NPM dependencies
         run: yarn install
       - name: Test project
