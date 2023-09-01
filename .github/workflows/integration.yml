@@ -5,8 +5,8 @@ on:
       - opened
       - synchronize
 jobs:
-  build-project:
-    name: Build project
+  test-project:
+    name: Test project
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -15,7 +15,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version-file: ./.node-version
-        cache: yarn
     - name: Install NPM dependencies
       run: yarn install
     - name: Test project
