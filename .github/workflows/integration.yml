@@ -4,28 +4,24 @@ on:
     types:
       - opened
       - synchronize
-#defaults:
-#  run:
-#    working-directory: front-end
-
 jobs:
   test-project:
     name: Test project
     runs-on: ubuntu-latest
     steps:
-      - name: step
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ./front-end/.node-version
+      - name: Install NPM dependencies
+        run: |
+          cd front-end
+          pwd
+          yarn install
+      - name: Test project
         run: |
           pwd
-          ls -la          
-          pwd
-#    - name: Checkout repository
-#      uses: actions/checkout@v3
-#    - name: Setup Node.js
-#      uses: actions/setup-node@v3
-#      with:
-#        node-version-file: ./front-end/.node-version
-#    - name: Install NPM dependencies
-#      run: yarn install
-#    - name: Test project
-#      run: yarn test
+          yarn test
 
