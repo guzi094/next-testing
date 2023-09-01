@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: $WORKING_DIRECTORY/.node-version
+          node-version-file: "$WORKING_DIRECTORY/.node-version"
       - name: Install NPM dependencies
         run: yarn install
       - name: Test and Build
