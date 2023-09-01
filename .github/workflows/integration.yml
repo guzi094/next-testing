@@ -4,13 +4,15 @@ on:
     types:
       - opened
       - synchronize
+
+defaults:
+  run:
+    working-directory: front-end
+
 jobs:
   test-project:
     name: Test project
     runs-on: ubuntu-latest
-    defaults:
-        run:
-            working-directory: front-end
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
