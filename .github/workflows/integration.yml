@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step
-        working-directory: /home/runner/work/next-testing/front-end
         run: |
           pwd
-          cd ..
+          ls -la
+          cd front-end
           pwd
 #    - name: Checkout repository
 #      uses: actions/checkout@v3
