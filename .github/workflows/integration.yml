@@ -12,9 +12,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     - name: Setup Node.js
-      uses: actions/setupj-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: 18.x
+        node-version: ${{ cat .node-version }}
+        cache: yarn
     - name: Install NPM dependencies
       run: yarn install
     - name: Test project
