@@ -16,8 +16,7 @@ jobs:
       - name: step
         run: |
           pwd
-          ls -la
-          cd front-end
+          ls -la          
           pwd
 #    - name: Checkout repository
 #      uses: actions/checkout@v3
