@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "serve out",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watchAll"
@@ -37,6 +37,7 @@
     "jest": "^29.6.4",
     "jest-environment-jsdom": "^29.6.4",
     "prettier": "^3.0.3",
+    "serve": "^14.2.1",
     "ts-jest": "^29.1.1"
   }
 }
