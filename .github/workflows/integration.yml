@@ -6,7 +6,7 @@ on:
       - synchronize
 defaults:
   run:
-    working-directory: ./front-end
+    working-directory: front-end
 
 jobs:
   test-project:
