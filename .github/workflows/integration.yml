@@ -4,9 +4,9 @@ on:
     types:
       - opened
       - synchronize
-defaults:
-  run:
-    working-directory: front-end
+#defaults:
+#  run:
+#    working-directory: front-end
 
 jobs:
   test-project:
