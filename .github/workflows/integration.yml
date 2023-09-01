@@ -1,15 +1,20 @@
-name: Build Next.js web application
+name: Test Next.js web application
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    types:
+      - opened
+      - synchronize
 jobs:
   build-project:
     name: Build project
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout repository
       uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setupj-node@v2
+      with:
+        node-version: 18.x
     - name: Install NPM dependencies
       run: yarn install
     - name: Test project
