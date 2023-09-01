@@ -5,7 +5,7 @@ import "@testing-library/jest-dom";
 describe("Home", () => {
   it("should have Docs text", () => {
     render(<Home />);
-    const linkElement = screen.getByText("DocsCC");
+    const linkElement = screen.getByText("Docs");
     expect(linkElement).toBeInTheDocument();
   });
 
