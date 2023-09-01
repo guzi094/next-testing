@@ -17,10 +17,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: ./front-end/.node-version
-      - name: Install NPM dependencies
+          node-version-file: .node-version
         run: |
-          cd front-end
+          pwd
+      - name: Install NPM dependencies
+        run: |          
           pwd
           yarn install
       - name: Test project
